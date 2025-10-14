@@ -2,10 +2,12 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.routing import APIRouter
 from fastapi.responses import JSONResponse
+from src.config import settings
 
 from src.routers.animal import router as animal_router
 
-BASE_ROUTE_PATH = "/api/v1"
+
+BASE_ROUTE_PATH = settings.BASE_ROUTE_PATH
 
 
 app = FastAPI(

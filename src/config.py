@@ -7,5 +7,6 @@ class Settings(BaseSettings):
         env_file='.env'
     )
     BASE_ROUTE_PATH: str = '/api/v1'
+    PLAYER_NAME: str = ''
 
 settings = Settings()
