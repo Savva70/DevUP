@@ -12,10 +12,42 @@ dependencies = [
     "uvicorn (>=0.37.0,<0.38.0)",
     "unicorn (>=2.1.4,<3.0.0)",
     "pydantic (>=2.12.1,<3.0.0)",
-    "pydantic-settings (>=2.11.0,<3.0.0)"
+    "pydantic-settings (>=2.11.0,<3.0.0)",
+    "sqlalchemy (>=2.0.44,<3.0.0)",
+    "alembic (>=1.17.0,<2.0.0)",
+    "psycopg (>=3.2.12,<4.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)",
+    "flake8-pyproject (>=1.2.3,<2.0.0)",
+    "isort (>=7.0.0,<8.0.0)",
+    "pytelegrambotapi (>=4.29.1,<5.0.0)"
+]
+[tool.flake8]
+max-line-length = 120
+ignore = [
+    # W503: line break before binary operator
+    "W503"
+]
+exclude = [
+    ".git",
+    "__pycache__",
+    "conf",
+    "venv",
+    ".venv",
+    ".vscode",
+    ".idea",
+    "./migrations"
 ]
 
+per-file-ignores = [
+#    "migrations/env.py:F401",
+#    "migrations/versions/*:W291",
+]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+test = [
+    "pep8-naming (>=0.15.1,<0.16.0)"
+]
