@@ -1,4 +1,5 @@
 import telebot
+
 from config import settings
 
 token = settings.TOKEN

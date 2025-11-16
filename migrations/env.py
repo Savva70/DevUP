@@ -12,24 +12,23 @@ sys.path.insert(0, dirname(dirname(abspath(__file__))))
 
 from src.config import settings
 from src.db.session import Base
-
+from src.models._class import Class
+from src.models.armor import Armor
+from src.models.enchatmens import Enchantmens
+from src.models.enemy import Enemy
 # should add all models here
 from src.models.item import Item
 from src.models.itemarmor import ItemArmor
 from src.models.itemweapon import ItemWeapon
 from src.models.nps import Nps
 from src.models.player import Player
-from src.models.usableitem import UsableItem
-from src.models.weapon import Weapon
-from src.models.armor import Armor
-from src.models.enchatmens import Enchantmens
-from src.models.enemy import Enemy
-from src.models._class import Class
 from src.models.property import Property
-from src.models.usable import Usable
 from src.models.propertyenemy import PropertyEnemy
 from src.models.propertynps import PropertyNps
 from src.models.propertyplayer import PropertyPlayer
+from src.models.usable import Usable
+from src.models.usableitem import UsableItem
+from src.models.weapon import Weapon
 
 target_metadata = Base.metadata
 

@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends
 from pydantic import UUID4
+from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, delete
 
 from src.db.session import get_session
 from src.models.player import Player
-from src.shemas.player import PlayerFromDB, PlayerCreate
+from src.shemas.player import PlayerCreate, PlayerFromDB
 
 router = APIRouter()
 

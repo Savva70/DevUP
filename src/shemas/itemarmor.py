@@ -1,5 +1,6 @@
 from pydantic import UUID4, BaseModel, Field
 
+
 class ItemArmorDB(BaseModel):
     uid: UUID4 = Field(
         description='UID ItemArmor',
