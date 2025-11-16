@@ -4,10 +4,11 @@ from fastapi.responses import JSONResponse
 from fastapi.routing import APIRouter
 
 from src.config import settings
-from src.routers.item import router as item_router
 from src.routers.armor import router as armor_router
+from src.routers.class_ import router as class_router
 from src.routers.enchatmens import router as enchatmens_router
 from src.routers.enemy import router as enemy_router
+from src.routers.item import router as item_router
 from src.routers.itemarmor import router as itemarmor_router
 from src.routers.itemweapon import router as itemweapon_router
 from src.routers.nps import router as nps_router
@@ -16,7 +17,7 @@ from src.routers.property import router as property_router
 from src.routers.usable import router as usable_router
 from src.routers.usableitem import router as usableitem_router
 from src.routers.weapon import router as weapon_router
-from src.routers.class_ import router as class_router
+
 BASE_ROUTE_PATH = settings.BASE_ROUTE_PATH
 
 

@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from pydantic import UUID4
+from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, delete
 
 from src.db.session import get_session
 from src.models.itemarmor import ItemArmor

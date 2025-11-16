@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends
 from pydantic import UUID4
+from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, delete
 
 from src.db.session import get_session
 from src.models.nps import Nps
-from src.shemas.nps import NPSFromDB, NPSCreate
+from src.shemas.nps import NPSCreate, NPSFromDB
 
 router = APIRouter()
 

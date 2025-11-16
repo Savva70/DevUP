@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends
 from pydantic import UUID4
+from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, delete
 
 from src.db.session import get_session
 from src.models._class import Class
-from src.shemas.__class import ClassFromDB, ClassCreate
+from src.shemas.__class import ClassCreate, ClassFromDB
 
 router = APIRouter()
 

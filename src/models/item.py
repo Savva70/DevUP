@@ -1,6 +1,6 @@
 import uuid
 
-from sqlalchemy import UUID, Integer, String, Boolean
+from sqlalchemy import UUID, Boolean, Integer, String
 from sqlalchemy.orm import Mapped, mapped_column
 
 from src.db.session import Base
